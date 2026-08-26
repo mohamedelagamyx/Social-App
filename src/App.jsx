@@ -12,11 +12,9 @@ import ChangePassword from './pages/ChangePassword';
 import NotFound from './pages/NotFound';
 
 export default function App() {
-  const Router = import.meta.env.VITE_GITHUB_PAGES === 'true' ? HashRouter : BrowserRouter;
-
   return (
     <AuthProvider>
-      <Router>
+      <HashRouter>
         <div className="app-shell">
           <Navbar />
           <Routes>
@@ -60,7 +58,7 @@ export default function App() {
             <Route path="*" element={<Navigate to="/404" replace />} />
           </Routes>
         </div>
-      </Router>
+      </HashRouter>
     </AuthProvider>
   );
 }
