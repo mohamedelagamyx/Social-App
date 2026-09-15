@@ -27,8 +27,6 @@ export default function PostDetails() {
 
   const load = async () => {
     setError('');
-    // Only fetch the post itself if we didn't already get it from the
-    // feed via router state (e.g. on a hard refresh or a shared link).
     if (!passedPost) setLoading(true);
     try {
       const requests = [commentsApi.getComments(postId, 1, 50)];
@@ -51,7 +49,6 @@ export default function PostDetails() {
 
   useEffect(() => {
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [postId]);
 
   const postOwnerId = getId(getPostOwner(post));

@@ -70,7 +70,6 @@ export default function SignUp() {
         login(token, user);
         navigate('/');
       } else {
-        // Some setups require signing in separately after signup.
         navigate('/login');
       }
     } catch (err) {

@@ -9,10 +9,6 @@ export const getFeed = (only = 'all', page = 1, limit = 10) =>
     .then((res) => res.data);
 
 export const getPostById = async (postId) => {
-  // No dedicated "GET /posts/:postId" endpoint is documented -- only
-  // GET /posts and GET /posts/feed are listed. Try the direct path first
-  // (in case it's supported but just undocumented), and if that 404s,
-  // fall back to searching the general listing and then the feed.
   try {
     const res = await axiosClient.get(`/posts/${postId}`);
     return res.data;

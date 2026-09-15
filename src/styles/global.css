@@ -10,7 +10,6 @@
   background: rgba(198, 74, 61, 0.2);
 }
 
-/* ---------- Navbar ---------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -75,7 +74,6 @@
   border-bottom-color: var(--string);
 }
 
-/* ---------- Page frame ---------- */
 .page {
   flex: 1;
   width: 100%;
@@ -101,7 +99,6 @@
   font-size: 0.95rem;
 }
 
-/* ---------- Auth card ---------- */
 .auth-page {
   min-height: calc(100vh - 60px);
   display: flex;
@@ -172,7 +169,6 @@
   font-weight: 600;
 }
 
-/* ---------- Forms ---------- */
 .field {
   margin-bottom: 1.1rem;
 }
@@ -229,7 +225,6 @@
   margin-bottom: 1.1rem;
 }
 
-/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -313,14 +308,12 @@
   font-size: 0.8rem;
 }
 
-/* ---------- Feed / thread ---------- */
 .feed {
   position: relative;
 }
 
 .feed::before {
-  /* the red string running through the whole feed, linking every post */
-  content: '';
+    content: '';
   position: absolute;
   left: 27px;
   top: 8px;
@@ -461,7 +454,6 @@
   margin-left: auto;
 }
 
-/* ---------- Comments ---------- */
 .comment-list {
   margin-top: 1.5rem;
 }
@@ -571,7 +563,6 @@
   resize: vertical;
 }
 
-/* ---------- Profile ---------- */
 .profile-header {
   background: var(--paper);
   border-radius: var(--radius-card);
@@ -636,7 +627,6 @@
   flex-shrink: 0;
 }
 
-/* ---------- Utility ---------- */
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
@@ -714,7 +704,6 @@
   }
 }
 
-/* ---------- Facebook-style feed theme ---------- */
 body {
   background: #f0f2f5;
   color: #1c1e21;
@@ -984,7 +973,6 @@ body {
   }
 }
 
-/* ---------- Modern profile surface ---------- */
 .profile-hero {
   position: relative;
   overflow: hidden;
@@ -1187,7 +1175,6 @@ body {
   font-size: 0.72rem;
 }
 
-/* Keep the stats visually separate from the identity copy on narrow screens. */
 @media (max-width: 640px) {
   .profile-cover {
     min-height: 96px;
@@ -1222,7 +1209,6 @@ body {
   }
 }
 
-/* Simple profile row */
 .profile-hero {
   overflow: visible;
   margin-bottom: 1.5rem;
@@ -1292,7 +1278,6 @@ body {
   }
 }
 
-/* Shared section separation */
 .page {
   position: relative;
 }
@@ -1382,7 +1367,6 @@ body {
   background: #ffd9d6;
 }
 
-/* Facebook-style profile header */
 .profile-hero {
   border-radius: 8px;
   margin-bottom: 0;
@@ -1553,7 +1537,6 @@ body {
   }
 }
 
-/* Final profile proportions */
 .profile-avatar {
   width: 78px !important;
   height: 78px !important;
@@ -1588,7 +1571,6 @@ body {
   }
 }
 
-/* Final simple profile layout */
 .profile-hero {
   overflow: visible;
   margin-bottom: 1.5rem;

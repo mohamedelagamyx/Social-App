@@ -25,8 +25,6 @@ export function AuthProvider({ children }) {
   });
   const [initializing, setInitializing] = useState(true);
 
-  // On first load, if we have a token but no cached user, fetch the
-  // profile so a page refresh doesn't lose the signed-in state.
   useEffect(() => {
     let cancelled = false;
 

@@ -35,7 +35,6 @@ export default function ChangePassword() {
     setSubmitting(true);
     try {
       const res = await usersApi.changePassword({ password, newPassword, rePassword });
-      // The API rotates the token on password change, per the docs.
       const nextToken = res.data?.token || res.token;
       if (nextToken) login(nextToken, user);
       setSuccess(true);

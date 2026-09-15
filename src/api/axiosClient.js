@@ -6,7 +6,6 @@ const axiosClient = axios.create({
   baseURL: BASE_URL,
 });
 
-// Attach the saved token to every request once the user is signed in.
 axiosClient.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -15,8 +14,6 @@ axiosClient.interceptors.request.use((config) => {
   return config;
 });
 
-// Normalize errors so components can rely on a consistent shape:
-// { message, errors }
 const normalizeErrors = (errors) => {
   if (!errors) return [];
 
@@ -45,8 +42,6 @@ axiosClient.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Token missing/expired/invalid -- clear local session so the
-      // app falls back to the login screen on next protected action.
       localStorage.removeItem('token');
       localStorage.removeItem('user');
     }
